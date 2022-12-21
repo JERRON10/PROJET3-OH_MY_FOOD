@@ -4,8 +4,12 @@
 $color-prim:#9356DC;
 $color-sec:#FF79DA;
 $color-ter:#99E2D0;
-$color-mix:linear-gradient(to top left,$color-prim,$color-sec 95%);
 $color-shadow:grey;
+
+@mixin color-gradient-shadow ($color1:$color-prim, $color2:$color-sec, $color3:$color-shadow, $val:0%){
+    background: linear-gradient(to top left, lighten($color1,$val), lighten($color2,$val) 95%);
+    box-shadow: 0 3px 8px darken($color3,$val);
+}
 
 body{
     margin: 0;
@@ -19,59 +23,110 @@ body{
         border-bottom: 1px white solid;
         text-align: center;
     }
+}
+
+.search{
     &__form{
         background-color: rgb(237, 237, 237);
         box-shadow: 0 3px 5px lightgrey inset;
         padding: 15px;
         text-align: center;
+
         label{
             margin-right: 8px;
         }
+
         input{
             background-color: rgb(237, 237, 237);
             border: none;
             color: black;
             font-size: large;
-            }
+        }
+
         ::placeholder{
             color: black;
-            }
+        }
     }
 }
 
 .expl{
     background-color: whitesmoke;
-    padding: 30px 0 30px 0;
+    padding: 30px;
+    height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     &__title{
         text-align: center;
-        margin: 10px;
+        margin: 0;
     }
     &__line{
+        margin: 10px 0 25px 0;
         text-align: center;
-        margin: 10px;
         font-weight: 500;
     }
     &__btn{
         text-align: center;
-        margin: 15px;
-        padding: 15px;
+        padding: 12px;
         border-radius: 25px;
-        background: $color-mix;
-        box-shadow: 0 1px 6px grey;
+        @include color-gradient-shadow;
         &:hover{
-            opacity: .9;
-            box-shadow: 0 1px 6px black;
+            @include color-gradient-shadow($val:10%);
         }
         & a{
             color: white;
             font-weight: 600;
             text-decoration: none;
-            padding: 15px;
+            padding: 12px;
         }
     }
+}
+
+.work{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    .container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        &__list{
+            background-color: whitesmoke;
+            box-shadow: 0 3px 8px lightgrey;
+            border-radius: 20px;
+            width: 250px;
+            margin-left: 10px;
+            position: relative;
+            margin-top: 20px;
+            &--violet{
+                background-color: lighten($color-prim, 35%);
+            }
+        }
+        .cercle{
+            text-align: center;
+            font-size: 12px;
+            position: absolute;
+            left: -10px;
+            top: 15px;
+            border-radius: 100px;
+            padding: 3px;
+            width: 15px;
+            color: white;
+            background-color: #9356DC;
+        }
+        .icontext{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+            color: black;
+            font-weight: 600;
+            &--violet i{
+                color: #9356DC;
+            }
+        }
+    }
+
 }
 
