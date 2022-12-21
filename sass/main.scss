@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
+
+$color-prim:#9356DC;
+$color-sec:#FF79DA;
+$color-ter:#99E2D0;
+$color-mix:linear-gradient(to top left,$color-prim,$color-sec 95%);
+$color-shadow:grey;
+
+body{
+    margin: 0;
+    font-family: "roboto";
+}
+
+.header{
+    &__mainlogo{
+        margin-top: 10px;
+        padding: 15px;
+        border-bottom: 1px white solid;
+        text-align: center;
+    }
+    &__form{
+        background-color: rgb(237, 237, 237);
+        box-shadow: 0 3px 5px lightgrey inset;
+        padding: 15px;
+        text-align: center;
+        label{
+            margin-right: 8px;
+        }
+        input{
+            background-color: rgb(237, 237, 237);
+            border: none;
+            color: black;
+            font-size: large;
+            }
+        ::placeholder{
+            color: black;
+            }
+    }
+}
+
+.expl{
+    background-color: whitesmoke;
+    padding: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        text-align: center;
+        margin: 10px;
+    }
+    &__line{
+        text-align: center;
+        margin: 10px;
+        font-weight: 500;
+    }
+    &__btn{
+        text-align: center;
+        margin: 15px;
+        padding: 15px;
+        border-radius: 25px;
+        background: $color-mix;
+        box-shadow: 0 1px 6px grey;
+        &:hover{
+            opacity: .9;
+            box-shadow: 0 1px 6px black;
+        }
+        & a{
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 15px;
+        }
+    }
+}
+
