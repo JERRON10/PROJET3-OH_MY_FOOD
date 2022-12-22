@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+<!-- HEADER -->
     <header class="header">
         
         <div class="header__mainlogo">
@@ -20,7 +20,7 @@
     </header>
 
     <main>
-
+<!-- SECTION RECHERCHE (SEARCH) -->
         <section class="search">
 
             <form class="search__form" action="#" get="post">
@@ -29,13 +29,13 @@
             </form>  
 
         </section>
-
-        <section class="expl">
-                <h1 class="expl__title">Réservez le menu qui vous convient</h1>
-                <p class="expl__line">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <boutton class="expl__btn"><a href="#resto">Explorer nos restaurants</a></boutton>
+<!-- SECTION EXPLORE -->
+        <section class="explore">
+                <h1 class="explore__title">Réservez le menu qui vous convient</h1>
+                <p class="explore__line">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <boutton class="explore__btn"><a href="#resto">Explorer nos restaurants</a></boutton>
         </section>
-
+<!-- SECTION WORK (FONCTIONNEMENT) -->
         <section class="work">
 
             <h2 class="work__title">Fonctionnement</h2>
@@ -69,64 +69,77 @@
             </div>
 
         </section>
+<!-- SECTION RESTAURANT (CARTE RESTO) -->
+        <section class="resto" id="resto" >
 
-        <section id="resto">
+            <h2 class="resto-title">Restaurants</h2>
 
-            <h2>Restaurants</h2>
-
-            <div class="containeur_cards">
+            <div class="resto-container">
 
                 <div class="card">
-                    <img class="card__pic" src="./images/jay-wennington.jpg" width="200" alt="image La palette du goût">
+
+                    <div class="card__pics">
+                        <span class="new">Nouveau</span>
+                        <img class="pic" src="./images/jay-wennington.jpg" width="200" alt="image La palette du goût">
+                    </div>
+
                     <div class="card__text">
                         <div class="info">
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
-                        <div class="logojm">
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-heart"></i></span>
                         </div>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
+                    
                 </div>
 
                 <div class="card">
-                    <img class="card__pic" src="./images/stil.jpg" width="200" alt="image La note enchantée">
+
+                    <div class="card__pics">
+                        <span class="new">Nouveau</span>
+                        <img class="pic" src="./images/stil.jpg" width="200" alt="image La note enchantée">
+                    </div>
+
                     <div class="card__text">
                         <div class="info">
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
-                        <div class="logojm">
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-heart"></i></span>
                         </div>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
+                    
                 </div>
 
                 <div class="card">
-                    <img class="card__pic" src="./images/toa-heftiba.jpg" width="200" alt="image à la française">
+
+                    <div class="card__pics">
+                        <img class="pic" src="./images/toa-heftiba.jpg" width="200" alt="image A la française">
+                    </div>
+
                     <div class="card__text">
                         <div class="info">
                             <h3>A la française</h3>
                             <p>Cité Rouge</p>
-                        <div class="logojm">
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-heart"></i></span>
                         </div>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
-
+                    
                 </div>
 
                 <div class="card">
-                    <img class="card__pic" src="./images/louis-hansel-shotsoflouis.jpg" width="200" alt="image Le délice des sens">
+
+                    <div class="card__pics">
+                        <img class="pic" src="./images/louis-hansel-shotsoflouis.jpg" width="200" alt="image Le délice des sens">
+                    </div>
+
                     <div class="card__text">
                         <div class="info">
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
-                        <div class="logojm">
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-heart"></i></span>
                         </div>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
+
                 </div>
 
             </div>
@@ -134,15 +147,16 @@
         </section>
 
     </main>
+<!-- FOOTER -->
+    <footer class="footer">
 
-    <footer>
+        <a class="footer__title" href="#">ohmyfood</a>
 
-        <a href="#">ohmyfood</a>
         <ul>
-            <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+            <li><a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>
-            <li><a href="mailto:jerome@gmail.com">Contact</a></li>
+            <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
         </ul>              
 
     </footer>
