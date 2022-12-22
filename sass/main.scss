@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 $color-prim:#9356DC;
 $color-sec:#FF79DA;
 $color-ter:#99E2D0;
@@ -15,6 +16,9 @@ body{
     font-family: "roboto";
     max-width: 1000px;
     margin: auto;
+    a{
+        text-decoration: none;
+    }
 }
 
 main{
@@ -34,6 +38,7 @@ main{
 // SECTION RECHERCHE //
 
 .search{
+
     &__form{
         background-color: rgb(237, 237, 237);
         box-shadow: 0 3px 5px lightgrey inset;
@@ -72,25 +77,27 @@ main{
         text-align: center;
         margin: 0;
     }
+
     &__line{
         margin: 10px 0 25px 0;
         text-align: center;
         font-weight: 300;
     }
+
     &__btn{
         text-align: center;
         border-radius: 25px;
         padding: 15px 10px;
         @include color-gradient-shadow;
+
         &:hover{
             @include color-gradient-shadow($val:10%);
         }
+
         a{
             padding: 10px;
             color: white;
             font-weight: 400;
-            text-decoration: none;
-
         }
     }
 }
@@ -106,11 +113,13 @@ main{
     &__title{
         margin-bottom: 5px;
     }
+
     .container{
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
+
         &__list{
             background-color: whitesmoke;
             box-shadow: 0 3px 8px lightgrey;
@@ -119,10 +128,12 @@ main{
             width: 300px;
             position: relative;
             margin-top: 20px;
+
             &--violet{
                 background-color: lighten($color-prim, 35%);
             }
         }
+
         .cercle{
             text-align: center;
             font-size: 12px;
@@ -135,6 +146,7 @@ main{
             color: white;
             background-color: #9356DC;
         }
+
         .icontext{
             padding: 0 25px;
             display: flex;
@@ -142,11 +154,13 @@ main{
             align-items: center;
             color: black;
             font-weight: 500;
+
             i{
                 font-size: 18px;
                 color: grey;
                 margin-right: 10px;
             }
+
             &--violet i{
                 color: #9356DC;
             }
@@ -184,12 +198,12 @@ main{
     width: 100%;
     height: 200px;
 
-
     &__pics{
         border-radius: 15px 15px 0 0;
         width: 100%;
         height: 70%;
         position: relative;
+
         .new{
             font-size: small;
             font-weight: bold;
@@ -201,6 +215,7 @@ main{
             top: 10px;
             padding: 5px 10px;
         }
+
         .pic{
             object-fit: cover;
             border-radius: 15px 15px 0 0;
@@ -214,16 +229,23 @@ main{
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+
         .info{
             h3, p{
+                color: black;
                 margin: 0;
                 font-size: 15px;
             }
         }
+
         i{
             color: black;
             font-size: x-large;
+            &:hover{
+                overflow:visible;
+                background-color: pink;
             }
+        }
     }
 }
 
@@ -232,6 +254,7 @@ main{
 .footer{
     background-color: rgb(50, 50, 50);
     padding: 20px;
+
     &__title{
         color:white;
         font-family: "Shrikhand";
@@ -243,9 +266,9 @@ main{
         li{
         list-style: none;
         margin-bottom: 5px;
+        
             a{
             color: white;
-            text-decoration: none;
             }
         }
     }

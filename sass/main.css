@@ -6,13 +6,16 @@ body {
   max-width: 1000px;
   margin: auto;
 }
+body a {
+  text-decoration: none;
+}
 
 main {
   margin: 0;
 }
 
 .header__mainlogo {
-  margin-top: 10px; 
+  margin-top: 10px;
   padding: 15px;
   text-align: center;
 }
@@ -75,7 +78,6 @@ main {
   padding: 10px;
   color: white;
   font-weight: 400;
-  text-decoration: none;
 }
 
 .work {
@@ -191,12 +193,17 @@ main {
   align-items: flex-start;
 }
 .card__text .info h3, .card__text .info p {
+  color: black;
   margin: 0;
   font-size: 15px;
 }
 .card__text i {
   color: black;
   font-size: x-large;
+}
+.card__text i:hover {
+  overflow: visible;
+  background-color: pink;
 }
 
 .footer {
@@ -217,5 +224,4 @@ main {
 }
 .footer ul li a {
   color: white;
-  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
