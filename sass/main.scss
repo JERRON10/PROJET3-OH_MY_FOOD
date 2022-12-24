@@ -6,9 +6,9 @@ $color-sec:#FF79DA;
 $color-ter:#99E2D0;
 $color-shadow:grey;
 
-@mixin color-gradient-shadow ($color1:$color-prim, $color2:$color-sec, $color3:$color-shadow, $val:0%){
+@mixin color-gradient-shadow ($color1:$color-prim, $color2:$color-sec, $color3:$color-shadow, $val:0%, $blur:10px){
     background: linear-gradient(to top left, lighten($color1,$val), lighten($color2,$val) 95%);
-    box-shadow: 0 2px 8px darken($color3,$val);
+    box-shadow: 0 2px $blur darken($color3,$val);
 }
 
 body{
@@ -91,7 +91,7 @@ main{
         @include color-gradient-shadow;
 
         &:hover{
-            @include color-gradient-shadow($val:10%);
+            @include color-gradient-shadow($val:5%, $blur:15px);
         }
 
         a{
@@ -235,16 +235,41 @@ main{
                 color: black;
                 margin: 0;
                 font-size: 15px;
-            }
+            }   
         }
 
-        i{
-            color: black;
+        .heart{
+            width: 25px;
+            height: 25px;
             font-size: x-large;
+            position: relative;
+
             &:hover{
-                overflow:visible;
-                background-color: pink;
+                > .ic{
+                    transform: scale(1);
+                }
+                > .ic2{
+                    transform: scale(1.1);
+                }
             }
+            .ic{
+                color: black;
+                position: absolute; 
+                transform: scale(0);
+                transform-origin: 50% 90%;
+                transition: transform 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            }
+            .ix{
+                color: black;
+                position:absolute;
+            }
+            .ic2{
+                color: $color-sec;
+                text-shadow: 0 0 8px $color-prim;
+                position: absolute;
+                transform: scale(0);
+                transition: transform 250ms 150ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+            }           
         }
     }
 }

@@ -68,11 +68,11 @@ main {
   border-radius: 25px;
   padding: 15px 10px;
   background: linear-gradient(to top left, #9356dc, #ff79da 95%);
-  box-shadow: 0 2px 8px gray;
+  box-shadow: 0 2px 10px gray;
 }
 .explore__btn:hover {
-  background: linear-gradient(to top left, #ae80e5, #fface8 95%);
-  box-shadow: 0 2px 8px #676767;
+  background: linear-gradient(to top left, #a16be0, #ff93e1 95%);
+  box-shadow: 0 2px 15px #737373;
 }
 .explore__btn a {
   padding: 10px;
@@ -197,13 +197,35 @@ main {
   margin: 0;
   font-size: 15px;
 }
-.card__text i {
-  color: black;
+.card__text .heart {
+  width: 25px;
+  height: 25px;
   font-size: x-large;
+  position: relative;
 }
-.card__text i:hover {
-  overflow: visible;
-  background-color: pink;
+.card__text .heart:hover > .ic {
+  transform: scale(1);
+}
+.card__text .heart:hover > .ic2 {
+  transform: scale(1.1);
+}
+.card__text .heart .ic {
+  color: black;
+  position: absolute;
+  transform: scale(0);
+  transform-origin: 50% 90%;
+  transition: transform 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.card__text .heart .ix {
+  color: black;
+  position: absolute;
+}
+.card__text .heart .ic2 {
+  color: #FF79DA;
+  text-shadow: 0 0 8px #9356DC;
+  position: absolute;
+  transform: scale(0);
+  transition: transform 250ms 150ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 .footer {
