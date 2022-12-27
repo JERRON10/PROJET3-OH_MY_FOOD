@@ -1,20 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 body {
-  margin: 0;
   font-family: "roboto";
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
 }
 body a {
   text-decoration: none;
 }
 
-main {
-  margin: 0;
-}
-
-.header__mainlogo {
+.header-home__mainlogo {
   margin-top: 10px;
   padding: 15px;
   text-align: center;
@@ -31,8 +26,8 @@ main {
 }
 .search__form input {
   background-color: rgb(237, 237, 237);
-  border: none;
   color: black;
+  border: none;
   font-size: large;
 }
 .search__form ::-moz-placeholder {
@@ -75,8 +70,8 @@ main {
   box-shadow: 0 2px 15px #737373;
 }
 .explore__btn a {
-  padding: 10px;
   color: white;
+  padding: 10px;
   font-weight: 400;
 }
 
@@ -136,16 +131,16 @@ main {
   color: #9356DC;
 }
 
-.resto {
+.restaurant {
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-.resto-title {
+.restaurant-title {
   color: black;
 }
-.resto-container {
+.restaurant-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -198,6 +193,7 @@ main {
   font-size: 15px;
 }
 .card__text .heart {
+  margin: 10px;
   width: 25px;
   height: 25px;
   font-size: x-large;
@@ -246,4 +242,158 @@ main {
 }
 .footer ul li a {
   color: white;
+}
+
+.header-page__pagelogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 15px;
+}
+.header-page__pagelogo .arrowback {
+  font-size: x-large;
+}
+.header-page__pagelogo::after {
+  content: "";
+}
+.header-page__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.resto-title {
+  background-color: whitesmoke;
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.resto-title h1 {
+  font-family: "shrikhand";
+  font-weight: 500;
+  padding: 10px;
+}
+.resto-title .heart {
+  width: 25px;
+  height: 25px;
+  font-size: x-large;
+  position: relative;
+}
+.resto-title .heart:hover > .ic {
+  transform: scale(1);
+}
+.resto-title .heart:hover > .ic2 {
+  transform: scale(1.1);
+}
+.resto-title .heart .ic {
+  color: black;
+  position: absolute;
+  transform: scale(0);
+  transform-origin: 50% 90%;
+  transition: transform 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.resto-title .heart .ix {
+  color: black;
+  position: absolute;
+}
+.resto-title .heart .ic2 {
+  color: #FF79DA;
+  text-shadow: 0 0 8px #9356DC;
+  position: absolute;
+  transform: scale(0);
+  transition: transform 250ms 150ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.project {
+  background-color: whitesmoke;
+  padding: 20px;
+}
+.project__title {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: medium;
+}
+.project__title span {
+  -webkit-text-decoration-color: #99E2D0;
+          text-decoration-color: #99E2D0;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.project .container-page {
+  background-color: white;
+  box-shadow: 0 2px 10px lightgrey;
+  width: 80%;
+  padding: 15px;
+  margin: 15px auto;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.project .container-page:hover::after {
+  transform: scaleX(1);
+}
+.project .container-page:hover h3 {
+  margin-right: 80px;
+}
+.project .container-page:hover p {
+  margin-right: 80px;
+}
+.project .container-page:hover span {
+  transform: translateX(-60px);
+}
+.project .container-page:hover .check {
+  transform: translateX(-44px) rotate(1turn);
+}
+.project .container-page::after {
+  content: "";
+  width: 60px;
+  height: 101%;
+  background-color: #99E2D0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms linear;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.project .container-page__title {
+  margin: 0;
+  margin-right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: margin-right 300ms;
+}
+.project .container-page__textandprice {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.project .container-page__textandprice p {
+  margin: 0;
+  margin-right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: margin-right 300ms;
+}
+.project .container-page__textandprice span {
+  font-weight: bold;
+  transform: translateX(0);
+  transition: all 300ms linear;
+}
+.project .container-page .check {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 1;
+  right: -25px;
+  top: 24px;
+  transform: translate(0), rotate(0turn);
+  transition: all 300ms linear;
 }/*# sourceMappingURL=main.css.map */
