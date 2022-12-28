@@ -307,7 +307,7 @@ body{
     }
 }
 
-// PAGE LA PALETTE DU GOUT //
+// PAGE - LA PALETTE DU GOUT //
 .header-page{
     &__pagelogo{
         display: flex;
@@ -324,10 +324,15 @@ body{
         }
     }
     &__img{
+        width: 100%;
+        height: 210px;
         img{
-            object-fit:cover;
+            object-fit: cover;
             width: 100%;
             height: 250px;
+            position: absolute;
+            z-index: -1;
+
         }
     }   
 }
