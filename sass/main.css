@@ -223,29 +223,36 @@ body a {
   font-size: x-large;
   position: relative;
 }
-.card__text .heart:hover > .ic {
+.card__text .heart:hover > .heart__full {
   transform: scale(1);
 }
-.card__text .heart:hover > .ic2 {
+.card__text .heart:hover > .heart__full--modified {
   transform: scale(1.1);
 }
-.card__text .heart .ic {
+.card__text .heart__full {
   color: black;
   position: absolute;
   transform: scale(0);
   transform-origin: 50% 90%;
-  transition: transform 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: transform 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-.card__text .heart .ix {
+.card__text .heart__full--modified {
+  color: #FF79DA;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  text-shadow: 0 0 8px #9356DC;
+  transform: scale(0);
+  transition: transform 250ms 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.card__text .heart__empty {
   color: black;
   position: absolute;
-}
-.card__text .heart .ic2 {
-  color: #FF79DA;
-  text-shadow: 0 0 8px #9356DC;
-  position: absolute;
-  transform: scale(0);
-  transition: transform 250ms 150ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  z-index: 2;
 }
 
 .footer {
@@ -289,6 +296,7 @@ body a {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  max-width: 1000px;
   height: 250px;
   position: absolute;
   z-index: -1;
@@ -306,34 +314,42 @@ body a {
   font-weight: 500;
 }
 .resto-title .heart {
+  margin: 10px;
   width: 25px;
   height: 25px;
   font-size: x-large;
   position: relative;
 }
-.resto-title .heart:hover > .ic {
+.resto-title .heart:hover > .heart__full {
   transform: scale(1);
 }
-.resto-title .heart:hover > .ic2 {
+.resto-title .heart:hover > .heart__full--modified {
   transform: scale(1.1);
 }
-.resto-title .heart .ic {
+.resto-title .heart__full {
   color: black;
   position: absolute;
   transform: scale(0);
   transform-origin: 50% 90%;
-  transition: transform 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: transform 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-.resto-title .heart .ix {
+.resto-title .heart__full--modified {
+  color: #9356DC;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  text-shadow: 0 0 8px #FF79DA;
+  transform: scale(0);
+  transition: transform 250ms 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.resto-title .heart__empty {
   color: black;
   position: absolute;
-}
-.resto-title .heart .ic2 {
-  color: #FF79DA;
-  text-shadow: 0 0 8px #9356DC;
-  position: absolute;
-  transform: scale(0);
-  transition: transform 250ms 150ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  z-index: 2;
 }
 
 .project {
@@ -433,7 +449,7 @@ body a {
   z-index: 1;
   right: -25px;
   top: 24px;
-  transform: translate(0), rotate(0turn);
+  transform: translate(0) rotate(0turn);
   transition: all 300ms linear;
 }
 

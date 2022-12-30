@@ -11,6 +11,54 @@ $color-shadow:grey;
     box-shadow: 0 2px $blur darken($color3,$val);
 }
 
+@mixin like ($color:black,$color2:$color-sec,$color_shadow:$color-prim) {
+        .heart{
+        margin: 10px;
+        width: 25px;
+        height: 25px;
+        font-size: x-large;
+        position: relative;
+
+        &:hover{
+            > .heart__full{
+                transform: scale(1);
+            }
+            > .heart__full--modified{
+                transform: scale(1.1);
+            }
+        }
+
+        &__full{
+            color: $color;
+            position: absolute; 
+            transform: scale(0);
+            transform-origin: 50% 90%;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            transition: transform 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            
+            &--modified{
+                color: $color2;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 3;
+                text-shadow: 0 0 8px $color-shadow;
+                transform: scale(0);
+                transition: transform 250ms 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);    
+            }
+        }
+
+        &__empty{
+            color: black;
+            position: absolute;
+            z-index: 2;
+        }
+    }
+}
+
+
 @keyframes moveup{
     from{
         transform: translateY(15px);
@@ -20,13 +68,14 @@ $color-shadow:grey;
         transform: translateY(0px);
         opacity: 1;
     }
-}    
+}   
 
 
 body{
     font-family: "roboto";
     max-width: 1000px;
     margin: 0 auto;
+
     a{
         text-decoration: none;
         }
@@ -34,6 +83,7 @@ body{
 
 // HEADER //
 .header-home{
+
     &__mainlogo{
         margin-top: 10px;
         padding: 15px;
@@ -69,6 +119,7 @@ body{
 
 // SECTION EXPLORE //
 .explore{
+    
     background-color: whitesmoke;
     padding: 25px;
     height: 220px;
@@ -244,42 +295,9 @@ body{
                 font-size: 15px;
             }   
         }
-
-        .heart{
-            margin: 10px;
-            width: 25px;
-            height: 25px;
-            font-size: x-large;
-            position: relative;
-
-            &:hover{
-                > .ic{
-                    transform: scale(1);
-                }
-                > .ic2{
-                    transform: scale(1.1);
-                }
-            }
-            .ic{
-                color: black;
-                position: absolute; 
-                transform: scale(0);
-                transform-origin: 50% 90%;
-                transition: transform 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-            }
-            .ix{
-                color: black;
-                position:absolute;
-            }
-            .ic2{
-                color: $color-sec;
-                text-shadow: 0 0 8px $color-prim;
-                position: absolute;
-                transform: scale(0);
-                transition: transform 250ms 150ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
-            }           
-        }
+        @include like;
     }
+    
 }
 
 // SECTION FOOTER //
@@ -309,30 +327,35 @@ body{
 
 // PAGE - LA PALETTE DU GOUT //
 .header-page{
+
     &__pagelogo{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 10px;
         padding: 15px;
+
         .arrowback{
             font-size: x-large;
         }
+
         &::after{
             content:"";
             // utilisation de ::after pour centrer le logo avec spacebetween // 
         }
     }
+
     &__img{
         width: 100%;
         height: 210px;
+
         img{
             object-fit: cover;
             width: 100%;
+            max-width: 1000px;
             height: 250px;
             position: absolute;
             z-index: -1;
-
         }
     }   
 }
@@ -349,49 +372,19 @@ body{
         font-weight: 500;
     }
     
-    .heart{
-            width: 25px;
-            height: 25px;
-            font-size: x-large;
-            position: relative;
-
-            &:hover{
-                > .ic{
-                    transform: scale(1);
-                }
-                > .ic2{
-                    transform: scale(1.1);
-                }
-            }
-            .ic{
-                color: black;
-                position: absolute; 
-                transform: scale(0);
-                transform-origin: 50% 90%;
-                transition: transform 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-            }
-            .ix{
-                color: black;
-                position:absolute;
-            }
-            .ic2{
-                color: $color-sec;
-                text-shadow: 0 0 8px $color-prim;
-                position: absolute;
-                transform: scale(0);
-                transition: transform 250ms 150ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
-            }           
-        }
+    @include like (black, $color-prim,$color-sec);
     }
 
 .project{
     background-color: whitesmoke;
     padding: 20px;
+
     &__title{
         margin-top: 0;
         text-transform: uppercase;
         font-weight: 300;
         font-size: medium;
+
         span{
             text-decoration: underline #99E2D0 3px;
             text-underline-offset: 8px;
@@ -407,6 +400,7 @@ body{
         border-radius: 15px;
         position: relative;
         overflow: hidden;
+
         &--starters{
             animation: moveup 500ms linear 500ms both;
         }
@@ -417,7 +411,6 @@ body{
             animation: moveup 500ms linear 1500ms both;
 
         }
-
 
         &:hover{
             &::after{
@@ -458,10 +451,12 @@ body{
             text-overflow: ellipsis;
             transition: margin-right 300ms;
         }
+
         &__textandprice{
             display: flex;
             justify-content: space-between;
             align-items: baseline;
+
             p{
                 margin:0;
                 margin-right: 0;
@@ -470,6 +465,7 @@ body{
                 text-overflow: ellipsis;
                 transition: margin-right 300ms;
             }
+
             span{
                 font-weight: bold;
                 transform: translateX(0);
@@ -484,7 +480,7 @@ body{
             z-index: 1;
             right: -25px;
             top: 24px;
-            transform: translate(0), rotate(0turn);
+            transform: translate(0) rotate(0turn);
             transition: all 300ms linear;
         }        
     }
