@@ -1,81 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-@-webkit-keyframes moveup {
-  from {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-@keyframes moveup {
-  from {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-body {
-  font-family: "roboto";
-  max-width: 1000px;
-  margin: 0 auto;
-}
-body a {
-  text-decoration: none;
-}
-
-.anim {
-  margin-top: 100px;
-  max-width: 1000px;
-  width: 100%;
-  -webkit-animation: invisible 250ms linear 2500ms 1 forwards;
-          animation: invisible 250ms linear 2500ms 1 forwards;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@-webkit-keyframes invisible {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes invisible {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-.spinner {
-  margin: auto;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border-top: 5px white solid;
-  border-right: 5px #99E2D0 solid;
-  border-bottom: 5px #99E2D0 solid;
-  border-left: 5px #99E2D0 solid;
-  outline: 2px #9356DC solid;
-  box-shadow: 0px 0px 20px #9356DC;
-  transform: scale(0);
-  rotate: 720deg;
-  -webkit-animation: turn 2500ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 100ms 1 both;
-          animation: turn 2500ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 100ms 1 both;
-}
-
 @-webkit-keyframes turn {
   0% {
     transform: rotate(0deg) scale(0);
@@ -96,7 +20,6 @@ body a {
     transform: rotate(720deg) scale(0);
   }
 }
-
 @keyframes turn {
   0% {
     transform: rotate(0deg) scale(0);
@@ -117,27 +40,42 @@ body a {
     transform: rotate(720deg) scale(0);
   }
 }
-.loading {
-  font-size: x-large;
-  font-family: "Shrikhand";
-  color: #FF79DA;
-  width: 100%;
-  text-align: center;
-  text-shadow: 1px 1px #9356DC;
-  transform: scale(1);
-  animation: invisible 500ms linear 100ms 1 reverse backwards;
+@-webkit-keyframes moveup {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
-.loading .small-btn {
-  opacity: 1;
-  -webkit-animation: point 1000ms ease-in-out infinite both;
-          animation: point 1000ms ease-in-out infinite both;
+@keyframes moveup {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
-.loading .small-btn--mod {
-  opacity: 1;
-  -webkit-animation: point 1000ms 100ms ease-in-out infinite both;
-          animation: point 1000ms 100ms ease-in-out infinite both;
+@-webkit-keyframes invisible {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
-
+@keyframes invisible {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @-webkit-keyframes point {
   0% {
     opacity: 1;
@@ -149,7 +87,6 @@ body a {
     opacity: 1;
   }
 }
-
 @keyframes point {
   0% {
     opacity: 1;
@@ -161,6 +98,64 @@ body a {
     opacity: 1;
   }
 }
+body {
+  font-family: "roboto";
+  max-width: 1000px;
+  margin: 0 auto;
+}
+body a {
+  text-decoration: none;
+}
+
+.anim {
+  margin-top: 150px;
+  max-width: 1000px;
+  width: 100%;
+  -webkit-animation: invisible 250ms linear 2500ms 1 forwards;
+          animation: invisible 250ms linear 2500ms 1 forwards;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.anim__spinner {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 5px white solid;
+  border-right: 5px #99E2D0 solid;
+  border-bottom: 5px #99E2D0 solid;
+  border-left: 5px #99E2D0 solid;
+  outline: 2px #9356DC solid;
+  box-shadow: 0px 0px 20px #9356DC;
+  transform: scale(0);
+  rotate: 720deg;
+  -webkit-animation: turn 2500ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 100ms 1 both;
+          animation: turn 2500ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 100ms 1 both;
+}
+.anim__loading {
+  font-size: x-large;
+  font-family: "Shrikhand";
+  color: #FF79DA;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px #9356DC;
+  transform: scale(1);
+  animation: invisible 500ms linear 100ms 1 reverse backwards;
+}
+.anim__loading.small-btn {
+  opacity: 1;
+  -webkit-animation: point 1000ms ease-in-out infinite both;
+          animation: point 1000ms ease-in-out infinite both;
+}
+.anim__loading.small-btn--mod {
+  opacity: 1;
+  -webkit-animation: point 1000ms 100ms ease-in-out infinite both;
+          animation: point 1000ms 100ms ease-in-out infinite both;
+}
+
 main {
   opacity: 0;
   animation: invisible 250ms linear 2500ms 1 reverse both;
@@ -216,23 +211,23 @@ main {
   font-weight: 300;
 }
 
-.btn {
+.big-btn {
   text-align: center;
   border-radius: 25px;
   padding: 15px 10px;
   background: linear-gradient(to top left, #9356dc, #ff79da 95%);
   box-shadow: 0 2px 10px gray;
 }
-.btn:hover {
+.big-btn:hover {
   background: linear-gradient(to top left, #a16be0, #ff93e1 95%);
   box-shadow: 0 2px 15px #737373;
 }
-.btn a {
+.big-btn a {
   color: white;
   padding: 10px;
   font-weight: 400;
 }
-.btn--larger {
+.big-btn--larger {
   padding: 15px 50px;
 }
 
@@ -363,8 +358,8 @@ main {
 .card__text .heart::after {
   content: "";
   background-color: white;
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   position: absolute;
   left: 0;
   top: 0;
@@ -380,7 +375,7 @@ main {
   transform: scaleY(0);
 }
 .card__text .heart__full {
-  color: black;
+  color: #FF79DA;
   position: absolute;
   left: 0;
   top: 0;
@@ -468,8 +463,8 @@ main {
 .resto-title .heart::after {
   content: "";
   background-color: whitesmoke;
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   position: absolute;
   left: 0;
   top: 0;
@@ -485,7 +480,7 @@ main {
   transform: scaleY(0);
 }
 .resto-title .heart__full {
-  color: black;
+  color: #FF79DA;
   position: absolute;
   left: 0;
   top: 0;
