@@ -106,6 +106,9 @@ body {
 body a {
   text-decoration: none;
 }
+body button {
+  border: none;
+}
 
 .anim {
   margin-top: 150px;
