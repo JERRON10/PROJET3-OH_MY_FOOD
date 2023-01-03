@@ -1,0 +1,46 @@
+.anim{
+    margin-top: 150px;
+    max-width: 1000px;
+    width: 100%;
+    animation: invisible 250ms linear 2500ms 1 forwards;
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__spinner{
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border-top: 5px white solid;
+        border-right: 5px $color-ter solid;
+        border-bottom: 5px $color-ter solid;
+        border-left: 5px $color-ter solid;
+        outline: 2px $color-prim solid;
+        box-shadow: 0px 0px 20px $color-prim;
+        transform: scale(0) rotate(360deg);
+        animation: turn 2500ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 100ms 1 both;
+        }
+
+    &__loading{
+        font-size: x-large;
+        font-family:"Shrikhand";
+        color: $color-sec;
+        width: 100%;
+        text-align: center;
+        text-shadow: 1px 1px $color-prim;
+        transform: scale(1);
+        animation: invisible 500ms linear 100ms 1 reverse backwards;
+
+        &.small-btn{
+            opacity: 1;
+            animation: point 1000ms ease-in-out infinite both;
+            &--mod{
+                opacity: 1;
+                animation: point 1000ms 100ms ease-in-out infinite both;
+            }
+        }
+    }
+} 

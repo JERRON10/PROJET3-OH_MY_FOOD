@@ -1,0 +1,52 @@
+@keyframes turn {
+    0%{
+        transform: rotate(0deg) scale(0);
+    }
+    25%{
+        transform: rotate(0deg) scale(1);
+    }
+    30%{
+        transform: rotate(100deg);
+    }
+    50%{
+        transform: rotate(200deg);
+    }
+    70%{
+        transform: rotate(320deg);
+    }
+    100%{
+        transform: rotate(720deg) scale(0);
+    }
+}
+
+@keyframes moveup{
+    from{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}   
+
+@keyframes invisible {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity:0;
+    }
+}
+
+@keyframes point{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}

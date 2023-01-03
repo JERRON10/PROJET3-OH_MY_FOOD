@@ -1,0 +1,19 @@
+
+// BUTTON EXPLORER ET COMMANDE
+.big-btn{
+    text-align: center;
+    border-radius: 25px;
+    padding: 15px 20px;
+    color: white;
+    font-weight: 400;
+
+    @include color-gradient-shadow;
+
+    &:hover{
+        @include color-gradient-shadow($val:5%, $blur:15px);
+    }
+
+    &--larger{
+        padding: 15px 50px;
+    }
+}
