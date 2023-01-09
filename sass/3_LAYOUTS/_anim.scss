@@ -3,7 +3,7 @@
     max-width: 1000px;
     width: 100%;
     animation: invisible 250ms linear 2500ms 1 forwards;
-    position:absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,8 +34,8 @@
         transform: scale(1);
         animation: invisible 500ms linear 100ms 1 reverse backwards;
 
-        &.small-btn{
-            // enlever l'éperluette pour que les bouttons s'animent!
+        .small-btn{
+            // enlever l'esperluette pour que les bouttons s'animent!
             opacity: 1;
             animation: point 1000ms ease-in-out infinite both;
             &--mod{

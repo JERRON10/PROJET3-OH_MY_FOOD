@@ -113,7 +113,7 @@ body a {
   width: 100%;
   -webkit-animation: invisible 250ms linear 2500ms 1 forwards;
           animation: invisible 250ms linear 2500ms 1 forwards;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,18 +144,18 @@ body a {
   transform: scale(1);
   animation: invisible 500ms linear 100ms 1 reverse backwards;
 }
-.anim__loading.small-btn {
+.anim__loading .small-btn {
   opacity: 1;
   -webkit-animation: point 1000ms ease-in-out infinite both;
           animation: point 1000ms ease-in-out infinite both;
 }
-.anim__loading.small-btn--mod {
+.anim__loading .small-btn--mod {
   opacity: 1;
   -webkit-animation: point 1000ms 100ms ease-in-out infinite both;
           animation: point 1000ms 100ms ease-in-out infinite both;
 }
 
-main {
+.la_page_principale {
   opacity: 0;
   animation: invisible 250ms linear 2500ms 1 reverse both;
 }
@@ -233,8 +233,11 @@ main {
   position: relative;
   margin-top: 20px;
 }
-.work .container__list--violet {
+.work .container__list:hover {
   background-color: #f2eafb;
+}
+.work .container__list:hover .icontext i {
+  color: #9356DC;
 }
 .work .container .cercle {
   text-align: center;
@@ -260,9 +263,6 @@ main {
   font-size: 18px;
   color: grey;
   margin-right: 10px;
-}
-.work .container .icontext--violet i {
-  color: #9356DC;
 }
 
 .restaurant {

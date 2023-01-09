@@ -1,4 +1,4 @@
-main{
+.la_page_principale{
     opacity: 0;
     animation: invisible 250ms linear 2500ms 1 reverse both;
     }
@@ -77,6 +77,7 @@ main{
         flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
+        
 
         &__list{
             background-color: whitesmoke;
@@ -87,8 +88,11 @@ main{
             position: relative;
             margin-top: 20px;
 
-            &--violet{
+            &:hover{
                 background-color: lighten($color-prim, 35%);
+            }
+            &:hover .icontext i{
+                color: #9356DC;
             }
         }
 
@@ -119,9 +123,6 @@ main{
                 margin-right: 10px;
             }
 
-            &--violet i{
-                color: #9356DC;
-            }
         }
     }
 }
