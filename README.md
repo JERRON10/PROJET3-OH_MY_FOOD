@@ -6,7 +6,7 @@ Mission: Je suis chargé de développer un site "mobile first" qui répertorie l
 de restaurant.
 
 Réalisations:
-- Implémenter la page d'acceuil et des pages menus avec HTML, CSS Sass
+- Implémenter la page d'acceuil et les pages menus avec HTML, CSS Sass
 - Mettre en place une structure de navigation pour le site web
 - Mettre en oeuvre des animations CSS
 - Assurer la cohérence graphique du site
